@@ -110,3 +110,9 @@ Here:
 - Port 8080 open (or adjust in code)
 
 ---
+
+## Future Work
+
+- Using video captured from devices, instead of writing fake video.
+- Allowing clients stream subscription.
+- Handling more clients streams, by testing with a more server resources.
