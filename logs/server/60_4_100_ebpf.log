@@ -1,0 +1,44 @@
+2025/05/04 23:04:09 eBPF Enabled: true
+2025/05/04 23:04:09 ✅ Loaded eBPF map from /sys/fs/bpf/xdp_ip_tc_map
+2025/05/04 23:04:09 Curent Participant IP 0.0.0.0, Current Participant Port 0
+2025/05/04 23:04:09 ✅ SFU Server running on :8080
+2025/05/04 23:04:09 Got Track from peermap[]
+2025/05/04 23:04:09 [peer-290561] ICE state: checking
+2025/05/04 23:04:09 Got Track from peermap[]
+2025/05/04 23:04:09 [peer-58778] ICE state: checking
+2025/05/04 23:04:09 Got Track from peermap[]
+2025/05/04 23:04:09 [peer-223544] ICE state: checking
+2025/05/04 23:04:09 Got Track from peermap[]
+2025/05/04 23:04:09 [peer-808888] ICE state: checking
+2025/05/04 23:04:10 [peer-290561] ICE state: connected
+2025/05/04 23:04:10 Peer peer-290561 connected from 10.0.2.15:40577
+2025/05/04 23:04:10 Peer peer-290561 connected from 10.0.2.15:40577
+2025/05/04 23:04:10 [peer-290561] Added to eBPF map at index 0
+2025/05/04 23:04:10 [peer-290561] Received track: video
+2025/05/04 23:04:10 📡 Sent renegotiation offer to peer-58778
+2025/05/04 23:04:10 📡 Sent renegotiation offer to peer-223544
+2025/05/04 23:04:10 📡 Sent renegotiation offer to peer-808888
+2025/05/04 23:04:10 [peer-58778] ICE state: connected
+2025/05/04 23:04:10 Peer peer-58778 connected from 10.0.2.15:58150
+2025/05/04 23:04:10 Peer peer-58778 connected from 10.0.2.15:58150
+2025/05/04 23:04:10 [peer-58778] Added to eBPF map at index 1
+2025/05/04 23:04:10 [peer-58778] Received track: video
+2025/05/04 23:04:10 📡 Sent renegotiation offer to peer-290561
+2025/05/04 23:04:10 [peer-223544] ICE state: connected
+2025/05/04 23:04:10 Peer peer-223544 connected from 10.0.2.15:57135
+2025/05/04 23:04:10 Peer peer-223544 connected from 10.0.2.15:57135
+2025/05/04 23:04:10 [peer-223544] Added to eBPF map at index 2
+2025/05/04 23:04:10 [peer-223544] Received track: video
+2025/05/04 23:04:10 [peer-808888] ICE state: connected
+2025/05/04 23:04:10 Peer peer-808888 connected from 10.0.2.15:47223
+2025/05/04 23:04:10 Peer peer-808888 connected from 10.0.2.15:47223
+2025/05/04 23:04:10 [peer-808888] Added to eBPF map at index 3
+2025/05/04 23:04:10 [peer-808888] Received track: video
+2025/05/04 23:05:54 [peer-290561] ICE state: disconnected
+2025/05/04 23:05:54 [peer-290561] Removed from eBPF map at index 0
+2025/05/04 23:05:54 [peer-58778] ICE state: disconnected
+2025/05/04 23:05:54 [peer-58778] Removed from eBPF map at index 1
+2025/05/04 23:05:54 [peer-223544] ICE state: disconnected
+2025/05/04 23:05:54 [peer-223544] Removed from eBPF map at index 2
+2025/05/04 23:05:55 [peer-808888] ICE state: disconnected
+2025/05/04 23:05:55 [peer-808888] Removed from eBPF map at index 3

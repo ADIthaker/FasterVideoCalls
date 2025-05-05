@@ -1,0 +1,34 @@
+2025/05/04 22:53:01 eBPF Enabled: true
+2025/05/04 22:53:01 ✅ Loaded eBPF map from /sys/fs/bpf/xdp_ip_tc_map
+2025/05/04 22:53:01 Curent Participant IP 0.0.0.0, Current Participant Port 0
+2025/05/04 22:53:01 ✅ SFU Server running on :8080
+2025/05/04 22:53:02 Got Track from peermap[]
+2025/05/04 22:53:02 [peer-487827] ICE state: checking
+2025/05/04 22:53:02 Got Track from peermap[]
+2025/05/04 22:53:02 [peer-191682] ICE state: checking
+2025/05/04 22:53:02 Got Track from peermap[]
+2025/05/04 22:53:02 [peer-860540] ICE state: checking
+2025/05/04 22:53:03 [peer-487827] ICE state: connected
+2025/05/04 22:53:03 Peer peer-487827 connected from 10.0.2.15:60851
+2025/05/04 22:53:03 Peer peer-487827 connected from 10.0.2.15:60851
+2025/05/04 22:53:03 [peer-487827] Added to eBPF map at index 0
+2025/05/04 22:53:03 [peer-487827] Received track: video
+2025/05/04 22:53:03 📡 Sent renegotiation offer to peer-191682
+2025/05/04 22:53:03 📡 Sent renegotiation offer to peer-860540
+2025/05/04 22:53:03 [peer-191682] ICE state: connected
+2025/05/04 22:53:03 Peer peer-191682 connected from 10.0.2.15:42068
+2025/05/04 22:53:03 Peer peer-191682 connected from 10.0.2.15:42068
+2025/05/04 22:53:03 [peer-191682] Added to eBPF map at index 1
+2025/05/04 22:53:03 [peer-191682] Received track: video
+2025/05/04 22:53:03 📡 Sent renegotiation offer to peer-487827
+2025/05/04 22:53:03 [peer-860540] ICE state: connected
+2025/05/04 22:53:03 Peer peer-860540 connected from 10.0.2.15:54709
+2025/05/04 22:53:03 Peer peer-860540 connected from 10.0.2.15:54709
+2025/05/04 22:53:03 [peer-860540] Added to eBPF map at index 2
+2025/05/04 22:53:03 [peer-860540] Received track: video
+2025/05/04 22:54:47 [peer-487827] ICE state: disconnected
+2025/05/04 22:54:47 [peer-487827] Removed from eBPF map at index 0
+2025/05/04 22:54:47 [peer-191682] ICE state: disconnected
+2025/05/04 22:54:47 [peer-191682] Removed from eBPF map at index 1
+2025/05/04 22:54:47 [peer-860540] ICE state: disconnected
+2025/05/04 22:54:47 [peer-860540] Removed from eBPF map at index 2

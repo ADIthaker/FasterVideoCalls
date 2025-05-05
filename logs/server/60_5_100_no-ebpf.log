@@ -1,0 +1,38 @@
+2025/05/04 22:14:11 eBPF Enabled: false
+2025/05/04 22:14:11 Skipping eBPF setup...
+2025/05/04 22:14:11 ✅ SFU Server running on :8080
+2025/05/04 22:14:11 Got Track from peermap[]
+2025/05/04 22:14:11 [peer-377865] ICE state: checking
+2025/05/04 22:14:11 Got Track from peermap[]
+2025/05/04 22:14:11 [peer-604872] ICE state: checking
+2025/05/04 22:14:12 Got Track from peermap[]
+2025/05/04 22:14:12 [peer-380099] ICE state: checking
+2025/05/04 22:14:12 Got Track from peermap[]
+2025/05/04 22:14:12 [peer-176427] ICE state: checking
+2025/05/04 22:14:12 Got Track from peermap[]
+2025/05/04 22:14:12 [peer-679038] ICE state: checking
+2025/05/04 22:14:12 [peer-377865] ICE state: connected
+2025/05/04 22:14:12 Peer peer-377865 connected from 10.0.2.15:52335
+2025/05/04 22:14:12 [peer-377865] Received track: video
+2025/05/04 22:14:12 📡 Sent renegotiation offer to peer-604872
+2025/05/04 22:14:13 📡 Sent renegotiation offer to peer-380099
+2025/05/04 22:14:13 📡 Sent renegotiation offer to peer-176427
+2025/05/04 22:14:13 📡 Sent renegotiation offer to peer-679038
+2025/05/04 22:14:13 [peer-604872] ICE state: connected
+2025/05/04 22:14:13 Peer peer-604872 connected from 10.0.2.15:43741
+2025/05/04 22:14:13 [peer-604872] Received track: video
+2025/05/04 22:14:13 📡 Sent renegotiation offer to peer-377865
+2025/05/04 22:14:13 [peer-380099] ICE state: connected
+2025/05/04 22:14:13 Peer peer-380099 connected from 10.0.2.15:40497
+2025/05/04 22:14:13 [peer-380099] Received track: video
+2025/05/04 22:14:13 [peer-176427] ICE state: connected
+2025/05/04 22:14:13 Peer peer-176427 connected from 10.0.2.15:59342
+2025/05/04 22:14:13 [peer-176427] Received track: video
+2025/05/04 22:14:13 [peer-679038] ICE state: connected
+2025/05/04 22:14:13 Peer peer-679038 connected from 10.0.2.15:42593
+2025/05/04 22:14:13 [peer-679038] Received track: video
+2025/05/04 22:15:57 [peer-604872] ICE state: disconnected
+2025/05/04 22:15:57 [peer-380099] ICE state: disconnected
+2025/05/04 22:15:57 [peer-679038] ICE state: disconnected
+2025/05/04 22:15:57 [peer-176427] ICE state: disconnected
+2025/05/04 22:15:57 [peer-377865] ICE state: disconnected

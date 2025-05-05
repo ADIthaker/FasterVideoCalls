@@ -1,0 +1,31 @@
+2025/05/04 22:16:10 eBPF Enabled: false
+2025/05/04 22:16:10 Skipping eBPF setup...
+2025/05/04 22:16:10 ✅ SFU Server running on :8080
+2025/05/04 22:16:10 Got Track from peermap[]
+2025/05/04 22:16:10 [peer-928261] ICE state: checking
+2025/05/04 22:16:10 Got Track from peermap[]
+2025/05/04 22:16:10 [peer-513744] ICE state: checking
+2025/05/04 22:16:10 Got Track from peermap[]
+2025/05/04 22:16:10 [peer-13225] ICE state: checking
+2025/05/04 22:16:10 Got Track from peermap[]
+2025/05/04 22:16:10 [peer-920383] ICE state: checking
+2025/05/04 22:16:11 [peer-928261] ICE state: connected
+2025/05/04 22:16:11 Peer peer-928261 connected from 10.0.2.15:47871
+2025/05/04 22:16:11 [peer-928261] Received track: video
+2025/05/04 22:16:11 📡 Sent renegotiation offer to peer-513744
+2025/05/04 22:16:11 📡 Sent renegotiation offer to peer-13225
+2025/05/04 22:16:11 📡 Sent renegotiation offer to peer-920383
+2025/05/04 22:16:11 [peer-513744] ICE state: connected
+2025/05/04 22:16:11 Peer peer-513744 connected from 10.0.2.15:55163
+2025/05/04 22:16:11 [peer-513744] Received track: video
+2025/05/04 22:16:11 📡 Sent renegotiation offer to peer-928261
+2025/05/04 22:16:11 [peer-13225] ICE state: connected
+2025/05/04 22:16:11 Peer peer-13225 connected from 10.0.2.15:60821
+2025/05/04 22:16:11 [peer-13225] Received track: video
+2025/05/04 22:16:11 [peer-920383] ICE state: connected
+2025/05/04 22:16:11 Peer peer-920383 connected from 10.0.2.15:50988
+2025/05/04 22:16:11 [peer-920383] Received track: video
+2025/05/04 22:17:55 [peer-928261] ICE state: disconnected
+2025/05/04 22:17:55 [peer-513744] ICE state: disconnected
+2025/05/04 22:17:55 [peer-13225] ICE state: disconnected
+2025/05/04 22:17:55 [peer-920383] ICE state: disconnected
