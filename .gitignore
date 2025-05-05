@@ -1,0 +1,5 @@
+.venv
+sfu_ebpf
+*.o
+sfu/server/server
+sfu/client/client
