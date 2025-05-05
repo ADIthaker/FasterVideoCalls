@@ -1,4 +1,4 @@
-# eBPF-Accelerated Video Conferencing (SFU Server)
+# SwiftCall: eBPF-Accelerated Video Conferencing Server
 
 This project is a high-performance **Selective Forwarding Unit (SFU)** written in Go using [Pion WebRTC](https://github.com/pion/webrtc), accelerated with **eBPF** via TC ingress hooks for low-latency RTP packet redirection.
 
