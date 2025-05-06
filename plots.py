@@ -130,7 +130,35 @@ class TsharkParser:
         for df, f in zip(self.conv_pds, conv_files):
             for column in df.columns:
                 self.conv_data_dicts[self._file_key(f)][column] = df[column].values.tolist()
+                
+    def get_percent_delta_reduction(self):
+        avg_vals = defaultdict(dict)
+
+        for t in self.rtp_deltas:
+            avg_vals[t] = defaultdict(dict)
+
+            for entry, val in self.rtp_data_dicts.items():
+                no_clients = self._get_info_filename(entry)["no_clients"]
+                is_ebpf = self._get_info_filename(entry)["mode"]
+                avg_vals[t][no_clients][is_ebpf] = sum(val[t])/len(val[t])
+
+        # Calculate Reduction
+        for metric, metric_dict in avg_vals.items():
+            for client_count, client_dict in metric_dict.items():
+                print((client_dict['no-ebpf'] - client_dict['ebpf'])/100.0, metric, client_count)
+            
+    def get_percent_throughput_reduction(self):
+        avg_vals = defaultdict(dict)
+        t = "Total_Bytes"
         
+        for entry, val in self.conv_data_dicts.items():
+            no_clients = self._get_info_filename(entry)["no_clients"]
+            is_ebpf = self._get_info_filename(entry)["mode"]
+            avg_vals[no_clients][is_ebpf] = sum(val[t])/sum(val["Duration"])
+
+        for client_count, client_dict in avg_vals.items():
+            print((client_dict['no-ebpf'] - client_dict['ebpf'])/100.0, t, client_count)
+
     def plot_conv_throughput(self):
         for t in self.conv_throughput:
             data_plot = dict()
@@ -208,5 +236,8 @@ if __name__ == "__main__":
     parser = TsharkParser("results")
     parser.parse_results()
     parser.populate_conv_pds()
-    #parser.plot_rtp_delta()
-    parser.plot_conv_throughput()
+    parser.populate_rtp_pds()
+    parser.get_percent_delta_reduction()
+    parser.get_percent_throughput_reduction()
+
+
