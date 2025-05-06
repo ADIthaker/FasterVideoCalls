@@ -14,6 +14,8 @@ class TsharkParser:
         self.conv_pds = []
         self.rtp_deltas = ["Min_Delta(ms)", "Max_Delta(ms)", "Mean_Delta(ms)"]
         self.rtp_data_dicts = defaultdict(dict)
+        self.conv_data_dicts = defaultdict(dict)
+        self.conv_throughput = ["Bytes-A_B", "Bytes-B_A", "Total_Bytes"]
 
     def _parse_conv_udp(self, input_file, output_file):
         rows = []
@@ -114,6 +116,51 @@ class TsharkParser:
             for column in df.columns:
                 self.rtp_data_dicts[self._file_key(f)][column] = df[column].values.tolist()
         
+    def populate_conv_pds(self):
+        conv_files = []
+        for root, _, files in os.walk("results"):
+                for file in files:
+                    if self.is_conversation_file(file, type="csv"):
+                        conv_files.append(self._join_to_results(file))
+        
+        for c in conv_files:
+            self.conv_pds.append(pd.read_csv(c))
+            self.conv_data_dicts[self._file_key(c)] = dict()
+        
+        for df, f in zip(self.conv_pds, conv_files):
+            for column in df.columns:
+                self.conv_data_dicts[self._file_key(f)][column] = df[column].values.tolist()
+        
+    def plot_conv_throughput(self):
+        for t in self.conv_throughput:
+            data_plot = dict()
+            for entry, _ in self.conv_data_dicts.items():
+                data_plot[self._get_info_filename(entry)["no_clients"]] = dict()
+
+            for entry, val in self.conv_data_dicts.items():
+                no_clients = self._get_info_filename(entry)["no_clients"]
+                is_ebpf = self._get_info_filename(entry)["mode"]
+                data_plot[no_clients][is_ebpf] = sum(val[t])/sum(val["Duration"])
+
+        labels = list(data_plot.keys())
+        ebpf_vals = [data_plot[k]["ebpf"] for k in labels]
+        noebpf_vals = [data_plot[k]["no-ebpf"] for k in labels]
+
+        fig = go.Figure(data=[
+            go.Bar(name='eBPF', x=labels, y=ebpf_vals, marker_color="#ffe100"),
+            go.Bar(name='No eBPF', x=labels, y=noebpf_vals, marker_color="violet")
+        ])
+
+        fig.update_layout(
+            title='Throughput Comparison per Client Count',
+            xaxis_title='Number of Clients',
+            yaxis_title='Throughput (MB/s or similar)',
+            barmode='group'
+        )
+
+        fig.show()
+            
+
     def plot_rtp_delta(self):
         for t in self.rtp_deltas:
             data_plot = dict()
@@ -160,5 +207,6 @@ class TsharkParser:
 if __name__ == "__main__":
     parser = TsharkParser("results")
     parser.parse_results()
-    parser.populate_rtp_pds()
-    parser.plot_rtp_delta()
+    parser.populate_conv_pds()
+    #parser.plot_rtp_delta()
+    parser.plot_conv_throughput()
