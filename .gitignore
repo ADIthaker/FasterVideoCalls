@@ -1,5 +1,5 @@
 .venv
 sfu_ebpf
-*.o
+*.o 
 sfu/server/server
 sfu/client/client
